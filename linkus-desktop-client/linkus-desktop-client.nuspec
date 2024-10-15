@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
+<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>linkus-desktop-client</id>
+    <version>1.7.3.0</version>
+    <owners>tom-berning</owners>
+    <title>linkus-desktop-client (Install)</title>
+    <authors>yeastar</authors>
+
+    <projectUrl>https://www.yeastar.com/de/linkus-softphone-desktop/</projectUrl>
+
+    <copyright>2006-2024 Xiamen Yeastar Information Technology Co., Ltd.</copyright>
+
+    <tags>linkus-desktop-client pbx yeastar</tags>
+    <summary>Yeastar softphone application for Windows</summary>
+    <description>The Linkus Desktop Client, compatible with the Yeastar P-Series Phone System, is a versatile and easy-to-use softphone application for Windows that provides a virtual desktop phone experience with user-friendly advanced communication features. </description>
+
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
