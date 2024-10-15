@@ -15,6 +15,7 @@
     <summary>Personalize and manage your Yealink headsets, webcams and speakerphones</summary>
     <description>Personalize and manage your Yealink headsets, webcams and speakerphones </description>
 
+    <packageSourceUrl>https://github.com/bookking3000/chocolatey-packages/tree/main/yealink-usb-connect</packageSourceUrl> 
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

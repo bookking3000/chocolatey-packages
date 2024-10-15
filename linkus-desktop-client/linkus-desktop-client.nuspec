@@ -18,6 +18,8 @@
     <summary>Yeastar softphone application for Windows</summary>
     <description>The Linkus Desktop Client, compatible with the Yeastar P-Series Phone System, is a versatile and easy-to-use softphone application for Windows that provides a virtual desktop phone experience with user-friendly advanced communication features. </description>
 
+    <packageSourceUrl>https://github.com/bookking3000/chocolatey-packages/tree/main/linkus-desktop-client</packageSourceUrl> 
+
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
