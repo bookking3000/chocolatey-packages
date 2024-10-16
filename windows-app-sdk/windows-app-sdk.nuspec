@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://docs.chocolatey.org/en-us/create/create-packages -->
+<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+  
+    <id>windows-app-sdk</id>
+  
+    <version>1.6.1</version>
+  
+    <owners>tom-muah, bookking3000</owners>
+
+    <title>windows-app-sdk (Install)</title>
+    <authors>microsoft corporation</authors>
+    <projectUrl>https://https://learn.microsoft.com/de-de/windows/apps/windows-app-sdk/downloads</projectUrl>
+
+    <copyright>2024 Microsoft Corporation</copyright>
+
+    <licenseUrl>https://github.com/microsoft/WindowsAppSDK?tab=MIT-1-ov-file#readme</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+
+    <projectSourceUrl>https://github.com/microsoft/WindowsAppSDK</projectSourceUrl>
+
+    <tags>windows-app-sdk sdk microsoft windows</tags>
+    <summary>The Windows App SDK is a set of new developer components and tools that represent the next evolution in the Windows app development platform. The Windows App SDK provides a unified set of APIs and tools that can be used in a consistent way by any desktop app on Windows 11 and downlevel to Windows 10, version 1809.</summary>
+    <description>
+    The Windows App SDK is a set of new developer components and tools that represent the next evolution in the Windows app development platform. The Windows App SDK provides a unified set of APIs and tools that can be used in a consistent way by any desktop app on Windows 11 and downlevel to Windows 10, version 1809. 
+    
+    
+    The Windows App SDK doesn't replace the Windows SDK or existing desktop Windows app types such as .NET (including Windows Forms and WPF) and desktop Win32 with C++. Instead, the Windows App SDK complements those existing tools and app types with a common set of APIs that developers can rely on across these platforms. For more details, see Benefits of the Windows App SDK.
+    </description>
+    <releaseNotes>https://learn.microsoft.com/de-de/windows/apps/windows-app-sdk/stable-channel#version-161-16240923002</releaseNotes>
+
+    <packageSourceUrl>https://github.com/bookking3000/chocolatey-packages/tree/main/linkus-desktop-client</packageSourceUrl> 
+
+
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
