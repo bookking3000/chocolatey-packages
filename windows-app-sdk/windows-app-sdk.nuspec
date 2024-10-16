@@ -13,7 +13,7 @@
 
     <title>windows-app-sdk (Install)</title>
     <authors>Microsoft Corporation</authors>
-    <projectUrl>https://https://learn.microsoft.com/de-de/windows/apps/windows-app-sdk/downloads</projectUrl>
+    <projectUrl>https://learn.microsoft.com/de-de/windows/apps/windows-app-sdk/downloads</projectUrl>
 
     <copyright>2024 Microsoft Corporation</copyright>
 
@@ -38,7 +38,7 @@
       <dependency id="visualstudio2022buildtools" version="117.11.5" />
       <dependency id="dotnet" version="8.0.10" />
     </dependencies>
-    
+
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
