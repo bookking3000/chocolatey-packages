@@ -32,7 +32,7 @@
     </description>
     <releaseNotes>https://learn.microsoft.com/de-de/windows/apps/windows-app-sdk/stable-channel#version-161-16240923002</releaseNotes>
 
-    <packageSourceUrl>https://github.com/bookking3000/chocolatey-packages/tree/main/linkus-desktop-client</packageSourceUrl> 
+    <packageSourceUrl>https://github.com/bookking3000/chocolatey-packages/tree/main/windows-app-sdk</packageSourceUrl> 
 
 
   </metadata>
