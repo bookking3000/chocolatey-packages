@@ -34,7 +34,11 @@
 
     <packageSourceUrl>https://github.com/bookking3000/chocolatey-packages/tree/main/windows-app-sdk</packageSourceUrl> 
 
-
+    <dependencies>
+      <dependency id="visualstudio2022buildtools" version="117.11.5" />
+      <dependency id="dotnet" version="8.0.10" />
+    </dependencies>
+    
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
