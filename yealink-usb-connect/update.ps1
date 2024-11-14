@@ -4,24 +4,33 @@ $releases = 'https://www.yealink.com/en/product-detail/usb-connect-management'
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases
-  $regex   = 'yealink-usb-connect-.*\.msi$'
-  $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
+  $htmlContent = $download_page.Content
 
-  Write-Host "Found Download-Link:"
-  Write-Host $url
+  # Regular expression to find MSI download link
+  $regex = 'href\s*=\s*"([^"]*yealink-usb-connect-.*\.msi)"'
+  $urlMatch = [regex]::Match($htmlContent, $regex)
+
+  if ($urlMatch.Success) {
+      $url = $urlMatch.Groups[1].Value
+      Write-Host "Found Download Link: $url"
+
+      # Regular expression to extract the version number from the URL
+      $versionRegex = '(\d+\.\d+\.\d+\.\d+)'
+      $versionMatch = [regex]::Match($url, $versionRegex)
+
+      if ($versionMatch.Success) {
+          $version = $versionMatch.Value
+          Write-Host "Extracted Version: $version"
+      } else {
+          throw "No version number found in the URL: $url"
+      }
+  } else {
+      throw "No matching download link found on $releases"
+  }
 
   $checksum = Get-RemoteChecksum $url
   Write-Host "Checksum:"
   Write-Host $checksum
-
-  # ===Temporary Download to read the Version from the MSI===
-  $tempPath = [System.IO.Path]::GetTempFileName() + ".msi"
-  Invoke-WebRequest -Uri $url -OutFile $tempPath
-
-  $versionObject = Get-AppLockerFileInformation -Path $tempPath | Select-Object -ExpandProperty Publisher | Select-Object BinaryVersion
-  $version = $versionObject.BinaryVersion.ToString()
-
-  Remove-Item $tempPath
 
   return @{ Version = $version; URL32 = $url; Checksum32 = $checksum }
 }
