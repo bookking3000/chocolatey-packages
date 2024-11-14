@@ -1,20 +1,19 @@
 ﻿import-module Chocolatey-AU
 
-$releases = 'https://www.yeastar.com/de/linkus-download/'
+$releases = 'www.yeastar.com/de/linkus-download/'
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases
-  $regex   = 'linkus_desktop_windows_msi_version.msi$'
-  $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
+  $htmlContent = $download_page.Content
 
+  # Regular expression to find MSI download link
+  $regex = 'href\s*=\s*"(https?://[^"]*linkus_desktop_windows_msi_version\.msi)"'
+  $urlMatch = [regex]::Match($htmlContent, $regex)
 
-  if (-not $url) {
-      Write-Output $download_page.links
-      #Write-Host $download_page.links
-      Write-Output "HREFs"
-      Write-Output $download_page.links | Where-Object href
-      #Write-Host $download_page.links | Where-Object href
-
+  if ($urlMatch.Success) {
+      $url = $urlMatch.Groups[1].Value
+      Write-Host "Found Download Link: $url"
+  } else {
       throw "No matching download link found on $releases"
   }
 
@@ -27,8 +26,9 @@ function global:au_GetLatest {
   $tempPath = [System.IO.Path]::GetTempFileName() + ".msi"
   Invoke-WebRequest -Uri $url -OutFile $tempPath
 
-  $versionObject = Get-AppLockerFileInformation -Path $tempPath | Select-Object -ExpandProperty Publisher | Select-Object BinaryVersion
-  $version = $versionObject.BinaryVersion.ToString()
+  $versionObject = Get-AppLockerFileInformation -Path $tempPath | Select-Object -ExpandProperty Publisher
+  $version = ($versionObject -split ',')[-1].Trim()  # Splits by comma and takes the last part, then trims whitespace
+  Write-Host "Extracted Version: $version"
 
   Remove-Item $tempPath
 
