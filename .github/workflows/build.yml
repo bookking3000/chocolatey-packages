@@ -35,6 +35,7 @@ jobs:
           Invoke-WebRequest -Uri 'https://www.yeastar.com/de/linkus-download/'
           cd ${{ matrix.package }}
           $UpdateOutput = .\update.ps1
+          Write-Output "UpdateOutput=$($UpdateOutput)" >> $Env:GITHUB_OUTPUT
           $NupkgPath = (($UpdateOutput.Result | Where-Object {$_ -like '*.nupkg''*'}) -split "'")[1]
           Write-Output "NupkgPath=$($NupkgPath)" >> $Env:GITHUB_OUTPUT
           $UpdateStatus = if ($UpdateOutput.Result -match 'No new version found') {'No Update'} else {'Update Available'}
