@@ -19,9 +19,6 @@ function global:au_GetLatest {
 
   $checksum = Get-RemoteChecksum $url
 
-  Write-Host "Download URL: $url"
-  Write-Host "Checksum: $checksum"
-
   # ===Temporary Download to read the Version from the MSI===
   $tempPath = [System.IO.Path]::GetTempFileName() + ".msi"
   Invoke-WebRequest -Uri $url -OutFile $tempPath
