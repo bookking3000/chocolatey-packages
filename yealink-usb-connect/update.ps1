@@ -1,4 +1,4 @@
-﻿import-module au
+﻿import-module Chocolatey-AU
 
 $releases = 'https://www.yealink.com/en/product-detail/usb-connect-management'
 

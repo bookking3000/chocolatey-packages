@@ -1,4 +1,4 @@
-﻿import-module au
+﻿import-module Chocolatey-AU
 
 $releases = 'https://www.yeastar.com/de/linkus-download/'
 
