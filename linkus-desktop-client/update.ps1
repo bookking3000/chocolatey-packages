@@ -7,7 +7,13 @@ function global:au_GetLatest {
   $regex   = 'linkus_desktop_windows_msi_version.msi$'
   $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
 
+
   if (-not $url) {
+      Write-Ouput $download_page.links
+      Write-Host $download_page.links
+      Write-Ouput $download_page.links | Where-Object href
+      Write-Host $download_page.links | Where-Object href
+
       throw "No matching download link found on $releases"
   }
 
