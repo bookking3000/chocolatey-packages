@@ -32,7 +32,6 @@ jobs:
       - name: Run ${{ matrix.package }} update script
         id: update
         run: |
-          Invoke-WebRequest -Uri 'https://www.yeastar.com/de/linkus-download/'
           cd ${{ matrix.package }}
           $UpdateOutput = .\update.ps1
           Write-Output "UpdateOutput=$($UpdateOutput)" >> $Env:GITHUB_OUTPUT
