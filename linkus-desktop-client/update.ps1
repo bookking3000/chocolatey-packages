@@ -7,12 +7,14 @@ function global:au_GetLatest {
   $regex   = 'linkus_desktop_windows_msi_version.msi$'
   $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
 
-  #Write-Host "Found Download-Link:"
-  #Write-Host $url
+  if (-not $url) {
+      throw "No matching download link found on $releases"
+  }
 
   $checksum = Get-RemoteChecksum $url
-  #Write-Host "Checksum:"
-  #Write-Host $checksum
+
+  Write-Host "Download URL: $url"
+  Write-Host "Checksum: $checksum"
 
   # ===Temporary Download to read the Version from the MSI===
   $tempPath = [System.IO.Path]::GetTempFileName() + ".msi"
