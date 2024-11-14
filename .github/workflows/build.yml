@@ -33,6 +33,7 @@ jobs:
         id: update
         run: |
           cd ${{ matrix.package }}
+          .\update.ps1
           $UpdateOutput = .\update.ps1
           $NupkgPath = (($UpdateOutput.Result | Where-Object {$_ -like '*.nupkg''*'}) -split "'")[1]
           Write-Output "NupkgPath=$($NupkgPath)" >> $Env:GITHUB_OUTPUT
