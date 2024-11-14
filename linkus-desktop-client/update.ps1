@@ -9,9 +9,9 @@ function global:au_GetLatest {
 
 
   if (-not $url) {
-      Write-Ouput $download_page.links
+      Write-Output $download_page.links
       Write-Host $download_page.links
-      Write-Ouput $download_page.links | Where-Object href
+      Write-Output $download_page.links | Where-Object href
       Write-Host $download_page.links | Where-Object href
 
       throw "No matching download link found on $releases"
