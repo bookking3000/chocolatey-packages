@@ -18,7 +18,7 @@ jobs:
       matrix:
         package: [
          linkus-desktop-client,
-         yealink-usb-connect,
+         #yealink-usb-connect,
         ]
 
     steps:
@@ -32,8 +32,8 @@ jobs:
       - name: Run ${{ matrix.package }} update script
         id: update
         run: |
+          Invoke-WebRequest -Uri 'https://www.yeastar.com/de/linkus-download/'
           cd ${{ matrix.package }}
-          .\update.ps1
           $UpdateOutput = .\update.ps1
           $NupkgPath = (($UpdateOutput.Result | Where-Object {$_ -like '*.nupkg''*'}) -split "'")[1]
           Write-Output "NupkgPath=$($NupkgPath)" >> $Env:GITHUB_OUTPUT
