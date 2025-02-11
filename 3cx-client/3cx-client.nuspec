@@ -14,7 +14,28 @@
 
     <tags>3cx-client pbx 3cx</tags>
     <summary>3cx desktop application for Windows</summary>
-    <description>The 3CX Desktop Client.</description>
+    <description>
+    The 3CX Softphone notifies users in real-time of incoming calls and enables easy call management from their desktop. Users can set their status, view CRM & phonebook entries as well as access their BLF panel for fast calling. 
+
+    Getting Started:
+
+      1. Download the 3CX App and open it.
+      2. Enter your 3CX URL - found in your “Welcome to 3CX” email.
+      3. Enter your email or extension number along with your password and click on “Login”.
+      4. The softphone will auto-provision.
+
+    Note: If 2FA is enabled for your extension, you will be requested to enter your security PIN.
+
+    Sign in using your Google or Microsoft 365 account by:
+
+      1. Open the softphone and enter your 3CX URL -  found in your “Welcome to 3CX” email.
+      2. Click on the Google or M365 buttons.
+      3. Your 3CX Web Client will open, log in. The Windows Tile dialog box will appear.
+      4. Click on the “Provision” button.
+      5. The softphone will auto-provision.
+
+    Learn more: https://www.3cx.com/user-manual/windows-softphone-app/.
+    </description>
 
     <packageSourceUrl>https://github.com/bookking3000/chocolatey-packages/tree/main/3cx-client</packageSourceUrl> 
 
