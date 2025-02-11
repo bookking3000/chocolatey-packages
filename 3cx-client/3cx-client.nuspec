@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>3cx-client</id>
+    <version>20.0.664.0</version>
+    <owners>tom-berning</owners>
+    <title>3CX (Install)</title>
+    <authors>3cx</authors>
+
+    <projectUrl>https://www.3cx.de/</projectUrl>
+
+    <copyright>© 2025 3CX Ltd.</copyright>
+
+    <tags>3cx-client pbx 3cx</tags>
+    <summary>3cx desktop application for Windows</summary>
+    <description>The 3CX Desktop Client.</description>
+
+    <packageSourceUrl>https://github.com/bookking3000/chocolatey-packages/tree/main/3cx-client</packageSourceUrl> 
+
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
