@@ -4,7 +4,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yealink-usb-connect</id>
-    <version>4.38.33.0</version>
+    <version>4.39.19.0</version>
 
     <title>yealink-usb-connect (Install)</title>
     <authors>yealink</authors>
