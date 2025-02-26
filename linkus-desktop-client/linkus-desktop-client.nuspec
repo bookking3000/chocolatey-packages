@@ -5,7 +5,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>linkus-desktop-client</id>
-    <version>1.9.3.0</version>
+    <version>1.10.2.0</version>
     <owners>tom-berning</owners>
     <title>linkus-desktop-client (Install)</title>
     <authors>yeastar</authors>
