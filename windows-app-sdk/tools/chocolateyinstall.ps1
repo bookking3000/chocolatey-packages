@@ -2,8 +2,8 @@
 
 $packageName= 'windows-app-sdk'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://aka.ms/windowsappsdk/1.6/1.6.240923002/windowsappruntimeinstall-x86.exe'
-$url64      = 'https://aka.ms/windowsappsdk/1.6/1.6.240923002/windowsappruntimeinstall-x64.exe'
+$url        = 'https://aka.ms/windowsappsdk/1.7/1.7.250401001/windowsappruntimeinstall-x64.exe'
+$url64      = 'https://aka.ms/windowsappsdk/1.7/1.7.250401001/windowsappruntimeinstall-x86.exe'
 
 $silentArgs = "--quiet"
 
