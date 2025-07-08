@@ -11,7 +11,7 @@ on:
 jobs:
   update_choco_auto:
     name: update_${{ matrix.package }}
-    runs-on: windows-2019
+    runs-on: windows-2025
 
     strategy:
       max-parallel: 1
