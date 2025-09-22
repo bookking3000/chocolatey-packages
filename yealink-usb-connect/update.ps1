@@ -7,7 +7,7 @@ function global:au_GetLatest {
   $htmlContent = $download_page.Content
 
   # Regular expression to find MSI download link
-  $regex = 'href\s*=\s*"([^"]*yealink-usb-connect-.*\.msi)"'
+  $regex = 'href\s*=\s*"([^"]*yealink-usb-connect.*-.*\.msi)"'
   $options = [Text.RegularExpressions.RegexOptions]'IgnoreCase, CultureInvariant'
   $urlMatch = [regex]::Match($htmlContent, $regex, $options)
 
