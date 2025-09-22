@@ -10,7 +10,7 @@ $packageArgs = @{
   fileType      = 'MSI'
   url           = 'https://image.yeastar.com/Yeastardownload/linkus_desktop_windows_msi_version.msi'
   softwareName  = 'Linkus Desktop Client*'
-  checksum      = 'f61f57d9f1e2bc475bdc069f111f50edf1dd775885fd9b566ca0d6b6e635ac96'
+  checksum      = '8239bd99ea01ae0433249d1abe69abb1954e66e10ff2886074234a772f6dce7b'
   checksumType  = 'sha256' 
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
   validExitCodes= @(0, 3010, 1641)
