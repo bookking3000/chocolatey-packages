@@ -5,10 +5,10 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   fileType      = 'msi'
-  url           = 'https://www.yealink.com/website-service/download/Yealink-USB-Connect(X86)-4.41.22.0.msi' 
+  url           = 'https://www.yealink.com/website-service/download/Yealink-USB-Connect(X86)--4.42.11.0.msi' 
   softwareName  = 'Yealink USB Connect*'
 
-  checksum      = 'f18d7942c8d5bc3d155b15d7f0051170ccfc20d3a5af0e6a5f5bea3bc2fd5f09'
+  checksum      = '58bffeba937c277a39d6667ddac5cf3b2343645e9257f805e6b70ad26355fd92'
   checksumType  = 'sha256'
 
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
